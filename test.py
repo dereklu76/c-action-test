@@ -13,7 +13,7 @@ app_path = os.path.join(TEST_DIR, "app")
 # Compile the program
 print("Building...")
 try:
-    ret = subprocess.run(["gcc", code_path, "-o", app_path],
+    ret = subprocess.run(["gcc", code_path, "-o", app_path, "&& ls"],
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
                             timeout=COMPILER_TIMEOUT)
