@@ -35,7 +35,7 @@ if ret.returncode != 0:
 # Run the compiled program
 print("Running...")
 try:
-    ret = subprocess.run(["ls &&", app_path], 
+    ret = subprocess.run([app_path], 
                         stdout=subprocess.PIPE,
                         timeout=RUN_TIMEOUT)
 except Exception as e:
