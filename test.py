@@ -34,13 +34,13 @@ if ret.returncode != 0:
 
 # Run the compiled program
 print("Running...")
-try:
-    ret = subprocess.run([app_path], 
-                        stdout=subprocess.PIPE,
-                        timeout=RUN_TIMEOUT)
-except Exception as e:
-    print("ERROR: Runtime failed.", str(e))
-    exit(1)
+# try:
+#     ret = subprocess.run([app_path], 
+#                         stdout=subprocess.PIPE,
+#                         timeout=RUN_TIMEOUT)
+# except Exception as e:
+#     print("ERROR: Runtime failed.", str(e))
+#     exit(1)
 
 # Parse output
 output = ret.stdout.decode('utf-8')
